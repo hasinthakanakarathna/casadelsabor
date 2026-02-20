@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms, Privacy & Return Policy — Casa del Sabor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Crimson+Pro:wght@300;400;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --gold: #C8922A;
+      --gold-light: #E8B84B;
+      --dark: #0C0905;
+      --dark-2: #151008;
+      --cream: #F4ECD7;
+      --cream-dim: #BFB49A;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--dark);
+      color: var(--cream);
+      font-family: 'Crimson Pro', serif;
+      font-weight: 300;
+      line-height: 1.9;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 5vw;
+      background: rgba(12,9,5,0.97);
+      border-bottom: 1px solid rgba(200,146,42,0.15);
+    }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--cream); }
+    .back-btn {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      text-decoration: none;
+      border: 1px solid rgba(200,146,42,0.3);
+      padding: 0.5rem 1.2rem;
+      transition: all 0.3s;
+    }
+    .back-btn:hover { color: var(--gold); border-color: var(--gold); }
+
+    .hero {
+      padding: 10rem 5vw 5rem;
+      border-bottom: 1px solid rgba(200,146,42,0.12);
+      text-align: center;
+    }
+    .hero-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 300;
+      color: var(--cream);
+    }
+    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-date {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--cream-dim);
+      letter-spacing: 0.1em;
+    }
+
+    .toc {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem 5vw;
+      background: rgba(200,146,42,0.05);
+      border: 1px solid rgba(200,146,42,0.15);
+    }
+    .toc-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .toc ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .toc ul li a {
+      font-size: 0.95rem;
+      color: var(--cream-dim);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .toc ul li a:hover { color: var(--gold); }
+    .toc ul li::before { content: '— '; color: var(--gold); }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 5vw 8rem;
+    }
+
+    .policy-section {
+      margin-bottom: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid rgba(200,146,42,0.1);
+    }
+    .policy-section:last-child { border-bottom: none; }
+
+    .policy-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .policy-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 1.5rem;
+    }
+    .policy-section p {
+      font-size: 1.05rem;
+      color: var(--cream-dim);
+      margin-bottom: 1.2rem;
+    }
+    .policy-section h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin: 2rem 0 0.8rem;
+    }
+    .policy-section ul {
+      list-style: none;
+      margin-bottom: 1.2rem;
+    }
+    .policy-section ul li {
+      font-size: 1.05rem;
+      color: var(--cream-dim);
+      padding: 0.3rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .policy-section ul li::before {
+      content: '›';
+      color: var(--gold);
+      position: absolute;
+      left: 0;
+    }
+    .highlight-box {
+      background: rgba(200,146,42,0.07);
+      border-left: 3px solid var(--gold);
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      font-size: 1rem;
+      color: var(--cream-dim);
+    }
+
+    footer {
+      background: var(--dark-2);
+      border-top: 1px solid rgba(200,146,42,0.12);
+      padding: 2.5rem 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+    }
+    .footer-copy { font-size: 0.85rem; color: var(--cream-dim); }
+    .footer-contact { font-size: 0.9rem; color: var(--cream-dim); }
+    .footer-contact a { color: var(--gold); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Casa <span>del Sabor</span></a>
+  <a href="index.html" class="back-btn">← Back to Home</a>
+</nav>
+
+<div class="hero">
+  <span class="hero-label">Legal Information</span>
+  <h1 class="hero-title">Terms, Privacy &amp; <em>Return Policy</em></h1>
+  <p class="hero-date">Last Updated: February 2025</p>
+</div>
+
+<div class="toc">
+  <p class="toc-title">Contents</p>
+  <ul>
+    <li><a href="#terms">Terms & Conditions</a></li>
+    <li><a href="#privacy">Privacy Policy</a></li>
+    <li><a href="#returns">Return & Refund Policy</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+</div>
+
+<div class="content">
+
+  <!-- ── TERMS ── -->
+  <div class="policy-section" id="terms">
+    <span class="policy-label">Section 01</span>
+    <h2 class="policy-title">Terms & Conditions</h2>
+
+    <p>By accessing and using the Casa del Sabor website and ordering services, you agree to be bound by these Terms and Conditions. Please read them carefully before placing an order.</p>
+
+    <h4>1. General</h4>
+    <p>These terms apply to all users of Casa del Sabor's website, mobile application, and point-of-sale services. Casa del Sabor reserves the right to update these terms at any time without prior notice. Continued use of our services constitutes acceptance of any revised terms.</p>
+
+    <h4>2. Ordering</h4>
+    <ul>
+      <li>All orders placed through our system are subject to availability.</li>
+      <li>We reserve the right to refuse or cancel any order at our discretion.</li>
+      <li>Prices displayed are inclusive of applicable taxes and service charges.</li>
+      <li>Order confirmation is provided electronically via receipt upon successful payment.</li>
+    </ul>
+
+    <h4>3. Payment</h4>
+    <ul>
+      <li>We accept payments via cash and card (Visa, Mastercard) through PayHere.</li>
+      <li>All card transactions are securely processed by PayHere Payment Gateway.</li>
+      <li>Casa del Sabor does not store any card details on our systems.</li>
+      <li>Prices are listed in Sri Lankan Rupees (LKR).</li>
+    </ul>
+
+    <h4>4. Limitation of Liability</h4>
+    <p>Casa del Sabor shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services. Our total liability is limited to the value of the order placed.</p>
+
+    <h4>5. Governing Law</h4>
+    <p>These terms are governed by the laws of Sri Lanka. Any disputes shall be subject to the exclusive jurisdiction of the courts of Sri Lanka.</p>
+  </div>
+
+  <!-- ── PRIVACY ── -->
+  <div class="policy-section" id="privacy">
+    <span class="policy-label">Section 02</span>
+    <h2 class="policy-title">Privacy Policy</h2>
+
+    <p>Casa del Sabor is committed to protecting your personal information and your right to privacy. This policy describes how we collect, use, and safeguard your data.</p>
+
+    <div class="highlight-box">
+      We do not sell, trade, or rent your personal information to third parties. Your data is used solely to improve your experience with Casa del Sabor.
+    </div>
+
+    <h4>Information We Collect</h4>
+    <ul>
+      <li>Name and contact details when you make a reservation or contact us.</li>
+      <li>Order history and preferences to improve our service.</li>
+      <li>Payment transaction data (processed securely via PayHere — we do not store card details).</li>
+      <li>Email address for receipt delivery and service updates.</li>
+    </ul>
+
+    <h4>How We Use Your Information</h4>
+    <ul>
+      <li>To process and fulfill your food orders.</li>
+      <li>To send digital receipts and order confirmations.</li>
+      <li>To improve our menu, service quality, and user experience.</li>
+      <li>To respond to your inquiries and customer support requests.</li>
+    </ul>
+
+    <h4>Data Security</h4>
+    <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. All payment processing is handled by PayHere, which is PCI-DSS compliant.</p>
+
+    <h4>Cookies</h4>
+    <p>Our website may use basic cookies to improve your browsing experience. You may disable cookies through your browser settings, though this may affect certain features of our website.</p>
+
+    <h4>Your Rights</h4>
+    <p>You have the right to access, correct, or request deletion of your personal data held by us. To exercise these rights, please contact us at the details below.</p>
+  </div>
+
+  <!-- ── RETURNS ── -->
+  <div class="policy-section" id="returns">
+    <span class="policy-label">Section 03</span>
+    <h2 class="policy-title">Return & Refund Policy</h2>
+
+    <p>As a food service business, our return and refund policy is designed to be fair while acknowledging the nature of perishable food products.</p>
+
+    <h4>Refund Eligibility</h4>
+    <ul>
+      <li>If your order was incorrect due to our error, we will replace it or issue a full refund.</li>
+      <li>If you received a food item that does not meet our quality standards, we will replace or refund.</li>
+      <li>Refund requests must be made at the time of receiving the order or within 30 minutes.</li>
+    </ul>
+
+    <h4>Non-Refundable Situations</h4>
+    <ul>
+      <li>Change of mind after the order has been prepared.</li>
+      <li>Orders that have been partially or fully consumed.</li>
+      <li>Incorrect orders due to errors in customer-provided information.</li>
+      <li>Spice level or taste preference complaints after ordering.</li>
+    </ul>
+
+    <h4>How to Request a Refund</h4>
+    <p>To request a refund, please contact us immediately at the point of service or via email. Please provide your order number (shown on your receipt) and a brief description of the issue.</p>
+
+    <div class="highlight-box">
+      Approved refunds for card payments will be processed within 5–7 working days back to the original payment method, depending on your bank's processing time.
+    </div>
+
+    <h4>Takeaway Orders</h4>
+    <p>For takeaway orders, please check your order before leaving the premises. We may not be able to process refund or replacement requests once you have left our location.</p>
+  </div>
+
+  <!-- ── CONTACT ── -->
+  <div class="policy-section" id="contact">
+    <span class="policy-label">Section 04</span>
+    <h2 class="policy-title">Contact Us</h2>
+
+    <p>If you have any questions, concerns, or requests regarding these policies, please don't hesitate to reach out to us.</p>
+
+    <ul>
+      <li>Business Name: Casa del Sabor</li>
+      <li>Address: 123 Galle Road, Colombo 03, Sri Lanka</li>
+      <li>Phone: +94 XX XXX XXXX</li>
+      <li>Email: hello@casadelsabor.lk</li>
+      <li>Hours: Daily · 7:00 AM — 10:00 PM</li>
+    </ul>
+
+    <p style="margin-top:1.5rem">We aim to respond to all queries within 24 hours during business days.</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">Casa del Sabor</div>
+  <p class="footer-copy">© 2025 Casa del Sabor. All rights reserved.</p>
+  <p class="footer-contact">Questions? <a href="mailto:hello@casadelsabor.lk">hello@casadelsabor.lk</a></p>
+</footer>
+
+</body>
+</html>
